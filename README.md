@@ -6,7 +6,7 @@ No external APIs or API keys are required; behavior is fully **offline** and **d
 
 ## Demo
 
-**Screen recording (2–3 min):** [Google Drive — Screen-Recording.mp4](https://drive.google.com/file/d/1rvZbIw8S7CxKHgDfW_YX6L5Z-V_JvUCT/view?usp=sharing)
+**Screen recording (1–2 min):** [Google Drive — Screen-Recording.mp4](https://drive.google.com/file/d/1rvZbIw8S7CxKHgDfW_YX6L5Z-V_JvUCT/view?usp=sharing)
 
 Ensure the file is shared as **Anyone with the link → Viewer** so reviewers do not need to sign in.
 
@@ -274,13 +274,13 @@ Per take-home handbook: disclosure of AI assistance and what was implemented per
 
 ### Production improvements (roadmap)
 
-**Immediate next steps (week 1)**
+**Immediate next steps**
 
 - Complement regex rules with **ML-based injection detection** (e.g., small fine-tuned encoder such as BERT/RoBERTa) for ambiguous phrasing, with rules as a fast path and the model as a second stage.
 - Add **telemetry**: detector hit rates, latency percentiles, and labeled review queue to estimate false positives / false negatives (without logging raw prompts by default).
 - **Policy config service** with versioning; optional **Redis** (or similar) cache for hot policy reads with TTL and invalidation on publish.
 
-**Scalability (month 1)**
+**Scalability**
 
 - **Horizontal scaling** behind a load balancer; stateless API replicas.
 - **Rate limiting** keyed by `app_id` (and optionally `user_id`) to mitigate abuse and noisy tenants.
@@ -304,7 +304,7 @@ Run from the repo root before you submit:
 6. **Tests**: `docker compose run --rm api python -m pytest -q` (and/or local `pytest -q`).
 7. **Secrets scan** (should return nothing sensitive): e.g. `grep -r "sk-" .` and `grep -ri "api_key" .` excluding `.venv` if present.
 
-**Optional deliverable:** hosted API + UI URLs, or a **2–3 minute** screen recording (Compose up, UI flow, CLI, tests passing).
+**Optional deliverable:** hosted API + UI URLs, or a **1–2 minute** screen recording (Compose up, UI flow, CLI, tests passing).
 
 ---
 
