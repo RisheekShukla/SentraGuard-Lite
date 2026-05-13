@@ -4,6 +4,12 @@ Minimal **GenAI guardrails gateway** (MVP): a FastAPI service that inspects a us
 
 No external APIs or API keys are required; behavior is fully **offline** and **deterministic**.
 
+## Demo
+
+**Screen recording (2–3 min):** [Google Drive — Screen-Recording.mp4](https://drive.google.com/file/d/1rvZbIw8S7CxKHgDfW_YX6L5Z-V_JvUCT/view?usp=sharing)
+
+Ensure the file is shared as **Anyone with the link → Viewer** so reviewers do not need to sign in.
+
 ## Project layout
 
 ```
